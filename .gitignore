@@ -1,10 +1,11 @@
 .DS_Store
-/TSV/bach
-/TSV/beethoven
-/TSV/mozart
-/TSV/paganini
+/TSV/Bach
+/TSV/Beethoven
+/TSV/Mozart
+/TSV/Paganini
 /TSV/Navarra
-/TSV/shos (BAE)
-/TSV/shos
+/TSV/Shostakovich B&E
+/TSV/Shostakovich
+/TSV/*.png
 *.mp4
 *.mov
