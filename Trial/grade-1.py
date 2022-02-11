@@ -5,7 +5,16 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
-import os
+import datetime
+
+W = '\033[0m'
+R = '\033[31m'
+G = '\033[32m'
+Y = '\033[33m'
+B = '\033[34m'
+P = '\033[35m'
+
+
 # Mac
 # CHROME_DRIVE_PATH = "/Users/ccy05327/Downloads/chromedriver"
 # BINARY_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
@@ -40,22 +49,13 @@ def parsePage():
     while found_grade == False:
         # wait a bit and click the left button twice (change later as the week increases)
         LEFT_BUTTON_PATH = '//*[@id="home-tabpanel"]/main/div/div/div/div/button[1]'
-
         time.sleep(1)
-
         driver.find_element_by_xpath(LEFT_BUTTON_PATH).click()
-
-        time.sleep(4)
+        time.sleep(6)
 
         # find all of <a> tags
         A_TAG_PATH = '//a[@data-click-key="degree_home.degree_home_page.click.item_link"]'
-
         a_tags = driver.find_elements_by_xpath(A_TAG_PATH)
-
-        # find all module titles
-        SPAN_TAG_PATH = '//span[@class="bold"]'
-        title_tags = driver.find_elements_by_xpath(SPAN_TAG_PATH)
-
         time.sleep(2)
 
         # if there exists a keyword "In review", that's the one
@@ -70,10 +70,13 @@ def parsePage():
                 title_strings = txt.get_attribute(
                     "data-track-href").split("/")[2].split("-")
                 title = " ".join(title_strings[1:])
+                current_time = datetime.datetime.now()
                 if 'In Review' in content:
                     found_grade = True
-                    print('#{} [{}]:\n {}\n-------------------------------------------'
-                          .format(idx+1, title.upper(), content))
+                    print(P+str(current_time))
+                    print(B+'#{} [{}]:'.format(idx+1, title.upper(), content))
+                    print(
+                        W+'\n--------------------------------------------------------------------')
         print("\n")
 
 
