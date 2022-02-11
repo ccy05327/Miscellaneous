@@ -58,16 +58,17 @@ def parsePage():
         # then, exit the while loop
         # otherwise, keep searching by click the left button again
         if len(a_tags) > 0:
-            os.system("clear")
-            print("Validating...\n")
-
+            # os.system("clear")
+            # print("Validating...\n")
             for idx, txt in enumerate(a_tags):
                 content = txt.get_attribute("aria-label")
-                time.sleep(1)
+                # time.sleep(1)
+                title_strings = txt.get_attribute("data-track-href").split("/")[2].split("-")
+                title = " ".join(title_strings[1:])
                 if 'In Review' in content:
                     found_grade = True
                     print('#{} [{}]:\n {}\n-------------------------------------------'
-                        .format(idx+1, title_tags[idx].text,content))
+                        .format(idx+1, title.upper(), content))
         print("\n")
 
 def run():
