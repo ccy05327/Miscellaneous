@@ -7,13 +7,12 @@ from selenium.webdriver.chrome.options import Options
 import time
 import os
 
-CHROME_DRIVE_PATH = "/Users/y/Downloads/chromedriver98"
+CHROME_DRIVE_PATH = '/Users/ccy05327/Downloads/chromedriver'
 BINARY_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-USER_DATA_DIR = '/Users/y/Library/Application Support/Google/Chrome/Default'
-PROFILE_DIR = '/Users/y/Library/Application Support/Google/Chrome/Default/Person 1'
+USER_DATA_DIR = '/Users/ccy05327/Library/Application Support/Google/Chrome/Default'
+PROFILE_DIR = '/Users/ccy05327/Library/Application Support/Google/Chrome/Default/Person 1'
 BSBC_HOME_TITLE = "Bachelor of Science in Computer Science | Home | Coursera"
-EMAIL = "explorationyear2020@gmail.com"
-PASSWORD = "Whatdreamlife@20"
+
 
 login_url = "https://www.coursera.org/degrees/bachelor-of-science-computer-science-london?authMode=login"
 url = "https://www.coursera.org/degrees/bachelor-of-science-computer-science-london/home"
@@ -24,7 +23,7 @@ options.binary_location = BINARY_PATH
 options.add_argument("user-data-dir="+USER_DATA_DIR)
 options.add_argument("profile-directory="+PROFILE_DIR)
 
-driver = webdriver.Chrome(options=options, service=s)
+driver = webdriver.Chrome(service=s)
 driver.set_window_position(0, 0)
 driver.set_window_rect(1, 1)
 
@@ -38,7 +37,7 @@ def parsePage():
         # wait a bit and click the left button twice (change later as the week increases)
         LEFT_BUTTON_PATH = '//*[@id="home-tabpanel"]/main/div/div/div/div/button[1]'
 
-        time.sleep(1)
+        time.sleep(3)
 
         driver.find_element_by_xpath(LEFT_BUTTON_PATH).click()
 
@@ -83,6 +82,4 @@ def run():
 
     driver.close()
 
-
-if __name__ == "__main__":
-    run()
+run()

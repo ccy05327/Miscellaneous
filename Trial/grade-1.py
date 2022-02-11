@@ -7,10 +7,10 @@ from selenium.webdriver.chrome.options import Options
 import time
 import os
 
-CHROME_DRIVE_PATH = "/Users/y/Downloads/chromedriver98"
+CHROME_DRIVE_PATH = "/Users/ccy05327/Downloads/chromedriver"
 BINARY_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-USER_DATA_DIR = '/Users/y/Library/Application Support/Google/Chrome/Default'
-PROFILE_DIR = '/Users/y/Library/Application Support/Google/Chrome/Default/Person 1'
+USER_DATA_DIR = '/Users/ccy05327/Library/Application Support/Google/Chrome/Default'
+PROFILE_DIR = '/Users/ccy05327/Library/Application Support/Google/Chrome/Default/Profile 1'
 BSBC_HOME_TITLE = "Bachelor of Science in Computer Science | Home | Coursera"
 EMAIL = ""
 PASSWORD = ""
