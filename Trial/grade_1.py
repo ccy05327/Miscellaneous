@@ -71,11 +71,13 @@ def parsePage():
                 time.sleep(1)
                 if 'In Review' in content:
                     found_grade = True
+                    with open('D:\\GitHub\\Miscellaneous\\Trial\\grade_output.txt', 'w', encoding='utf-8') as file:
+                        file.writelines([current_time, '#{} [{}]:\n{}'.format(
+                            idx+1, title.upper(), content), '-'*76])
                     print(current_time)
                     print(Y+'#{} [{}]:\n{}'.format(idx +
                           1, title.upper(), content))
-                    print(
-                        W+'-------------------------------------------------------------------------')
+                    print(W+'-'*76)
         # print("\n")
 
 
