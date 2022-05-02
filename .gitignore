@@ -1,13 +1,11 @@
 .DS_Store
-/TSV/Bach
-/TSV/Beethoven
-/TSV/Mozart
-/TSV/Paganini
-/TSV/Navarra
-/TSV/Shostakovich B&E
-/TSV/Shostakovich
+
 /TSV/*.png
 *.mp4
 *.mov
 *.log
 /stream info/stream info/*.png
+
+*.out
+*.exe
+.vsc
