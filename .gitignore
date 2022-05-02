@@ -9,3 +9,5 @@
 /TSV/*.png
 *.mp4
 *.mov
+*.log
+/stream info/stream info/*.png
