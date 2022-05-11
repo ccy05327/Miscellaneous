@@ -8,4 +8,10 @@
 
 *.out
 *.exe
-.vsc
+*.vsc
+*.vscode
+*.vs
+x64
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
