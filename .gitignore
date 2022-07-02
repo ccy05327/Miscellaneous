@@ -1,10 +1,11 @@
 .DS_Store
 
-/TSV/*.png
+/TSV
+*.png
+*.jpg
 *.mp4
 *.mov
 *.log
-/stream info/stream info/*.png
 
 *.out
 *.exe
