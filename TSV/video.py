@@ -8,7 +8,7 @@ Y = '\033[33m'
 B = '\033[34m'
 P = '\033[35m'
 
-video_path = "intro.mp4"
+video_path = "Untitled.mp4"
 
 # Read the video from specified path
 cam = cv2.VideoCapture(video_path)
