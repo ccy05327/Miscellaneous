@@ -20,3 +20,5 @@ x64
 *package-lock.json
 *package.json
 */node_modules
+
+*.venv
