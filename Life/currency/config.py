@@ -1,6 +1,6 @@
 import os
 
-TARGET_CURRENCIES = ["USD", "AUD", "GBP", "EUR"]
+TARGET_CURRENCIES = ["USD", "AUD"]
 NOTION_KEY = os.getenv("NOTION_API_KEY")
 DATABASE_ID = os.getenv("NOTION_DATABASE_ID")
 
